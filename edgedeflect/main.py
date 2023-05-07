@@ -28,9 +28,9 @@ def init():
 
 
     # Load Ini-file
-    ConfigDeployMethod = config.get('Settings', 'DeployMethod')
+    ConfigDeflectMethod = config.get('Settings', 'DeflectMethod')
 
-    print(ConfigDeployMethod)
+    print(ConfigDeflectMethod)
 
 
     pass
