@@ -1,14 +1,20 @@
 import argparse
 
-parser = argparse.ArgumentParser(description='Beschreibung des Skripts')
-parser.add_argument('--option1', help='Beschreibung der Option 1')
-parser.add_argument('--option2', help='Beschreibung der Option 2')
+parser = argparse.ArgumentParser(description='D')
+parser.add_argument('--windows-start', help='H1')
 args = parser.parse_args()
 
-if args.option1:
-    # Führen Sie Aktionen für Option 1 aus
+
+def init():
+    ### here we init the script like creating folders and changing run locations...
+    ### and variable... so on...
     pass
 
-if args.option2:
-    # Führen Sie Aktionen für Option 2 aus
+
+if args.option1:
+    # run code on pc start
+    pass
+
+if not args.option1:
+    # here we can set settings...
     pass
