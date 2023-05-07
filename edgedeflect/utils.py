@@ -67,6 +67,7 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument(
     "--browser",
+    "-b",
     action="store",
     help="Path to the browser to use instead of edge.",
     default=get_default_browser_path(),
@@ -79,4 +80,16 @@ parser.add_argument(
     "--overwrite",
     help="Will forcefully overwrite existing backups without prompting.",
     action="store_false",
+)
+parser.add_argument(
+    "--verbose",
+    "-v",
+    action="store_false",
+    help="Weather to print debug information or not."
+)
+parser.add_argument(
+    "--version",
+    "-V",
+    action="store_false",
+    help="Print the version and exit."
 )

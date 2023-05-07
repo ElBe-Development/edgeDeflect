@@ -1,0 +1,8 @@
+---
+docs:
+  - "Docs"
+module:
+  - "Modules/*"
+dependencies:
+  - "*requirements*.txt
+  - "pyproject.toml"
