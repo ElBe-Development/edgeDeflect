@@ -30,13 +30,26 @@ DEALINGS IN THE SOFTWARE.
 
 import utils
 
+
 #################
 # CLI ARGUMENTS #
 #################
 
 args = utils.parser.parse_args()
 
-if args.no_backup:
-    pass
 
-print(args.browser)
+########
+# MAIN #
+########
+
+def main() -> None:
+    """Main function."""
+    
+    if args.version:
+        from .__init__ import __version__
+        
+        print("Version:", __version__)
+        exit(0)
+
+if __name__ == "__main__":
+    main()
