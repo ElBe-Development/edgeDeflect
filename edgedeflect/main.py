@@ -13,6 +13,15 @@ parser.add_argument('--windowsstart', help='H1')
 
 args = parser.parse_args()
 config = configparser.ConfigParser()
+
+try:
+    open("config.ini", "r")
+except FileNotFoundError:
+    config.add_section("Settings")
+    config.set("Settings", "DeflectMethod", "none")
+    with open("config.ini", "w") as f:
+        config.write(f)
+
 config.read('config.ini')
 
 installDir = ""
@@ -33,13 +42,17 @@ PrintMethods = r"""
 
 
 
+
+
+
+
+
 def init():
     ### here we init the script like creating folders and changing run locations...
     ### and variable... so on...
     global ConfigDeflectMethod, installDir
     if installDir != "" :
         os.chdir(installDir)
-
 
 
 
