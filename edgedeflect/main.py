@@ -27,7 +27,8 @@ PrintMethods = r"""
 [2] H2
 [3] H3
 
-[0] Exit"""
+[0] Exit
+"""
 
 
 
@@ -66,7 +67,7 @@ if __name__ == '__main__':
         print()
         print("Change the Method?")
         print(PrintMethods)
-        cmdInput = input("Choose a Number =}")
+        cmdInput = input("Choose a Number : ")
         if not cmdInput.isdigit():
             exit("user is too dumb to follow instructions")
         elif int(cmdInput) == 0:
