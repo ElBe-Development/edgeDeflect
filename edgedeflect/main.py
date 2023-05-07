@@ -15,7 +15,7 @@ args = parser.parse_args()
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-
+installDir = ""
 
 ConfigDeflectMethod = ""
 
@@ -35,8 +35,7 @@ PrintMethods = r"""
 def init():
     ### here we init the script like creating folders and changing run locations...
     ### and variable... so on...
-    global ConfigDeflectMethod
-    installDir = ""
+    global ConfigDeflectMethod, installDir
     if installDir != "" :
         os.chdir(installDir)
 
