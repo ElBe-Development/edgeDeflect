@@ -16,9 +16,26 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 
 
+
+ConfigDeflectMethod = ""
+
+
+
+
+PrintMethods = r"""
+[1] H1
+[2] H2
+[3] H3
+
+[0] Exit"""
+
+
+
+
 def init():
     ### here we init the script like creating folders and changing run locations...
     ### and variable... so on...
+    global ConfigDeflectMethod
     installDir = ""
     if installDir != "" :
         os.chdir(installDir)
@@ -30,7 +47,7 @@ def init():
     # Load Ini-file
     ConfigDeflectMethod = config.get('Settings', 'DeflectMethod')
 
-    print(ConfigDeflectMethod)
+
 
 
     pass
@@ -46,4 +63,24 @@ if __name__ == '__main__':
 
     if not args.windowsstart:
         # here we can set settings...
+        print(f"DeflectMethod = {ConfigDeflectMethod}")
+        print()
+        print("Change the Method?")
+        print(PrintMethods)
+        cmdInput = input("Choose a Number =}")
+        if not cmdInput.isdigit():
+            exit("user is too dumb to follow instructions")
+        elif int(cmdInput) == 0:
+            exit()
+        elif int(cmdInput) == 1:
+            # code method 1
+            print("#code method 1")
+        elif int(cmdInput) == 2:
+            # code method 2
+            print("#code method 2")
+        elif int(cmdInput) == 3:
+            # code method 3
+            print("#code method 3")
+        else:
+            exit("Number is Out of Range")
         pass
